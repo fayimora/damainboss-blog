@@ -1,21 +1,20 @@
 class PostsController < ApplicationController
   def index
-    show
-    render('show')
+    @posts = Post.all
   end
 
   def new
-    @post = Post.new(:name => "Fayimora", :title => "Title here", :body => "Body here")
+    @post = Post.new
   end
 
   def create
     @post = Post.new(params[:post])
     if @post.save
       flash[:notice] = "Message Saved!"
-      redirect_to :action => 'show'
+      redirect_to @post
     else
       flash[:notice] = "Message Not Saved!"
-      render 'new'
+      render :new
     end
   end
 
@@ -23,13 +22,25 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def show
-    @post = Post.all
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes params[:post]
+      flash[:notice] = "Message Saved!"
+      redirect_to @post
+    else
+      flash[:notice] = "Message Not Saved!"
+      render :edit
+    end
   end
 
-  def delete
-    Post.find(parms[:id]).destroy
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
     flash[:notice] = "Post successfully destroyed!"
-    redirect_to :action => 'show'
+    redirect_to :posts
   end
 end
