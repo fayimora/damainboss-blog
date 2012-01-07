@@ -3,7 +3,9 @@
 
 <section>
 	<%= form_for(:post, :url => {:action => 'create' }) do |f| %>
+		
 		<%= render :partial => 'form', :locals => {:f => f }  %>
+		
 		<%= submit_tag("Create Post") %>
 	<% end %>
 </section>
