@@ -1,0 +1,17 @@
+<%= form_for @post do |form| %>
+<table>
+	<tr>
+		<th>Name: </th>
+		<td> <%= form.text_field(:name) %> </td>
+	</tr>
+	<tr>
+		<th>Title: </th>
+		<td> <%= form.text_field(:title) %> </td>
+	</tr>
+	<tr>
+		<th>Content: </th>
+		<td> <%= form.text_area(:body) %> </td>
+	</tr>
+</table>
+<%= form.submit %>
+<% end %>

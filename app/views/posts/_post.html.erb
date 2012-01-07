@@ -1,0 +1,6 @@
+<h2><%= post.title %></h2>
+<%= simple_format post.body %>
+<ul>
+  <li>Posted at <%= post.created_at %></li>
+  <li><%= link_to "show", post %></li>
+</ul>
