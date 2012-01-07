@@ -1,10 +1,9 @@
 Blog::Application.routes.draw do
-     root :to => 'post#show'
-     match 'post' => 'post#show'
-     get "post/new"
-     get "post/edit"
-     get "post/show"
-     get "post/delete"
-     # get "post/create"
-
+  root :to => 'posts#show'
+  match 'posts' => 'posts#show'
+  get "posts/new"
+  get "posts/edit"
+  get "posts/show"
+  get "posts/delete"
+  # get "posts/create"
 end
