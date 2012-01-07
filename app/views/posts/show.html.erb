@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+
+<div><%= simple_format @post.body %></div>
+
+<ul>
+  <li><%= link_to "edit", edit_post_path(@post) %></li>
+  <li><%= link_to "destroy", @post, :method => :delete, :confirm => "Are you sure?" %></li>
+</ul>
+
+<p><%= link_to "back to posts", posts_path %></p>
