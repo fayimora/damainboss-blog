@@ -7,4 +7,31 @@
   <li><%= link_to "destroy", @post, :method => :delete, :confirm => "Are you sure?" %></li>
 </ul>
 
+<% unless @post.comments.empty? %>
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <b>Commenter:</b>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <b>Comment:</b>
+    <%= comment.body %>
+  </p>
+<% end %>
+<% end %>
+
+
+
+
+
+
+ 	<h3>Add a comment</h3>
+	<%= form_for [@post, @post.comments.build] do |form| %>
+		Name: <%= form.text_field :commenter%><br/>
+		Comment:<br/>
+		<%= form.text_area :body, :rows => 10 %><br/>
+		<%=form.submit "Send Comment" %>
+	<%end%>
 <p><%= link_to "back to posts", posts_path %></p>
