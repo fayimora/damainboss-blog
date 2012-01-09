@@ -1,17 +1,20 @@
+<% @post.tags.build %>
 <%= form_for @post do |form| %>
 <table>
 	<tr>
 		<th>Name: </th>
-		<td> <%= form.text_field(:name) %> </td>
+		<td> <%= form.text_field :name %> </td>
 	</tr>
 	<tr>
 		<th>Title: </th>
-		<td> <%= form.text_field(:title) %> </td>
+		<td> <%= form.text_field :title %> </td>
 	</tr>
 	<tr>
 		<th>Content: </th>
-		<td> <%= form.text_area(:body) %> </td>
+		<td> <%= form.text_area :body %> </td>
 	</tr>
 </table>
+	<h2>Tags:</h2>
+	<%= render :partial => 'tags/form', :locals => {:form => form }  %>
 <%= form.submit %>
 <% end %>

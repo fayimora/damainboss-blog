@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  post: 
+
+two:
+  name: MyString
+  post: 
+
+# == Schema Information
+#
+# Table name: tags
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  post_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
