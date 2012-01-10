@@ -5,8 +5,7 @@ class Post < ActiveRecord::Base
               :length => {:minimum => 5} #title must have minimum length of 5
     has_many :comments, :dependent => :destroy #delete all comments dependent on a post when a post is deleted 
     has_many :tags
-    
-    
+    # has_and_belongs_to_many :posts
     
     accepts_nested_attributes_for :tags, :allow_destroy => true,
                                   :reject_if => proc {|attrs| attrs.all? { |k, v| v.blank? } } 
