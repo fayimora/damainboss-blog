@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>Blog</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "application", "coderay" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<section class="container_16">
 <%= yield %>
+</section>
 
 </body>
 </html>

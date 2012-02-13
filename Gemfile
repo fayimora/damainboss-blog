@@ -6,7 +6,9 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'css3buttons'
+gem 'coderay'
+gem 'RedCloth'
 gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 
 # Gems used only for assets and not required

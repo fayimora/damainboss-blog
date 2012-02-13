@@ -8,7 +8,8 @@ class Post < ActiveRecord::Base
     # has_and_belongs_to_many :posts
     
     accepts_nested_attributes_for :tags, :allow_destroy => true,
-                                  :reject_if => proc {|attrs| attrs.all? { |k, v| v.blank? } } 
+                                  :reject_if => proc {|attrs| attrs.all? { |k, v| v.blank? } }
+    
     # The :allow_destroy option on the nested attribute declaration tells
     # Rails to display a “remove” checkbox on the view that you’ll build 
     # shortly. The :reject_if option prevents saving new tags that do not

@@ -1,12 +1,12 @@
-<hr/>
+<article class="post round">
 <h3><%= post.title %></h3>
-<%= simple_format post.body %>
+<%= post.body %>
 <ul>
   <li>Posted at <%= post.created_at %></li>
   <li><%= pluralize post.comments.count, "comment" %></li>
-  <li><%= link_to "show", post %></li>
+  <li><%= primary_button_link_to "show", post %></li>
 </ul>
-<br/>
+</article>
 
 
 

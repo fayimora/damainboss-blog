@@ -1,3 +1,16 @@
 // Place all the styles related to the Post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$blue:#4D90FE;
+
+.post{
+	background-color:#fff;
+	padding:10px;
+	margin:20px;
+}
+
+ul{
+	li{
+		list-style-type:none;
+	}
+}

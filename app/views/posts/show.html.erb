@@ -1,7 +1,9 @@
 <%= notice %>
 <h1><%= @post.title %></h1>
 
-<div><%= simple_format @post.body %></div>
+<article class="post round">
+	<%= coderay(@post.body) %></div>
+</article>
 
 <ul>
   <li><%= link_to "edit", edit_post_path(@post) %></li>
