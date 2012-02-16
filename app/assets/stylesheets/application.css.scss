@@ -4,17 +4,23 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require css3buttons/without-reset
  *= require_self
- *= require_tree . 
+ *= require_tree .
+ *= require gritter 
 */
 $blue:#4D90FE;
 body{
 	background-color:$blue;
+//	background-image:url('rails.png');
+	background-attachment:fixed;
 }
 
 .round {
   border-radius:         20px;
 }
 
+.notice{
+	background-color:green;
+}
 .CodeRay {
   background-color: #232323;
   border: 1px solid black;

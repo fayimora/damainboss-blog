@@ -1,11 +1,17 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-
+gem "gritter", "1.0.1"
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
+group :development do
+	gem 'sqlite3'
+end
+	gem 'kaminari'
 
-gem 'sqlite3'
+gem 'activeadmin'
+gem 'meta_search', '>=1.1.0.pre'
+
 gem 'css3buttons'
 gem 'coderay'
 gem 'RedCloth'
@@ -20,7 +26,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+group :production do
+	gem 'pg'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

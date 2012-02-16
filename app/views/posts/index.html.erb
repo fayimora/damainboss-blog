@@ -1,5 +1,7 @@
 <h1>Posts</h1>
-<%= notice %>
+<%= gflash %>
+	
 <%= render @posts %>
 
-<%= link_to "New Post", new_post_path %>
+<%= link_to "New Post", new_post_path %> <br>
+<%= paginate @posts %>

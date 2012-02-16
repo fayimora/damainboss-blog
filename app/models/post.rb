@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+
     validates :name, :presence => true #name must be present
     validates :body, :presence => true #name must be present
     validates :title, :presence => true, #title must be present
