@@ -1,0 +1,34 @@
+en:
+  gflash:
+    #
+    # These are the translations for the different titles.
+    #
+    titles:
+      notice: "Notice"
+      success: "Success"
+      warning: "Warning"
+      error: "Error"
+      progress: "Progress"
+    
+    posts:
+        update:
+            notice: "Product notice"
+            error: "Product error"
+            success: "Product success"
+        index:
+            notice: "Product notice"
+            error: "Product error"
+            success: "Product success"
+        destroy:
+            success: "Post successfully deleted"
+        
+    #
+    # Add gflash messages for controller actions:
+    # products:
+    #   create:
+    #     notice: "This is a notification"
+    #     error: "Something went wrong"
+    #
+    # Inside controller: 
+    # gflash :notice, :error
+    #
