@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
        # gflash :notice, :success, :error
-    @posts = Post.page(params[:page]).per(2)
+    @posts = Post.page(params[:page]).per(5)
     # @posts = Post.order("title")
   end
 
