@@ -1,6 +1,6 @@
 <article class="post round">
 <h3><%= post.title %></h3>
-<%= post.body %>
+<%= coderay post.body %>
 <ul>
   <li>Posted at <%= post.created_at %></li>
   <li><%= pluralize post.comments.count, "comment" %></li>
