@@ -5,9 +5,9 @@ gem "gritter", "1.0.1"
 gem 'mysql'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-group :development do
+#group :development do
 	gem 'sqlite3'
-end
+#end
 	gem 'kaminari'
 
 gem 'activeadmin'
