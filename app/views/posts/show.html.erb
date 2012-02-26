@@ -6,12 +6,12 @@
 </article>
 
 <ul>
-  <li><%= link_to "edit", edit_post_path(@post) %></li>
-  <li><%= link_to "destroy", @post, :method => :delete, :confirm => "Are you sure?" %></li>
+  <li><%#= link_to "edit", edit_post_path(@post) %></li>
+  <li><%#= link_to "destroy", @post, :method => :delete, :confirm => "Are you sure?" %></li>
 </ul>
 
-<h2>Tags: </h2>
-<%= @post.tags.map {|t| t.name}.join(", ") %>
+<!-- <h2>Tags: </h2> -->
+<%#= @post.tags.map {|t| t.name}.join(", ") %>
 <br/>
 <%= render @post.comments %>
 
