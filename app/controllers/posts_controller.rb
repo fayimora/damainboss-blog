@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
   def index
-       # gflash :notice, :success, :error
     @posts = Post.page(params[:page]).per(5)
-    # @posts = Post.order("title")
   end
 
   def new
@@ -12,10 +10,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      flash[:notice] = "Message Saved!"
+      gflash :success => "Post has been created!"
       redirect_to @post
     else
-      flash[:notice] = "Message Not Saved!"
+      gflash :notice => "Message Not Saved!"
       render :new
     end
   end
@@ -27,11 +25,10 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes params[:post]
-        # gflash :success => "Updated!", :notice => "THis produt has been updated successfully" 
-        gflash :notice, :success, :error
+        gflash :notice => "Post updated!"
         redirect_to @post
     else
-      flash[:notice] = "Message Not Saved!"
+      gflash :warning => "Message Not Saved!"
       render :edit
     end
   end
@@ -43,7 +40,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    gflash :success
+    gflash :success => "Deleted"
     redirect_to :posts
   end
 end
