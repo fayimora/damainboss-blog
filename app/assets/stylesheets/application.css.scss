@@ -8,9 +8,12 @@
  *= require gritter 
 */
 $blue:#4D90FE;
+$green:#7BB026;
+$red:#D14836;
+
 body{
-	background-color:$blue;
-//	background-image:url('rails.png');
+	background-color:$red;
+//  background-image:url('rails.png');
 	background-attachment:fixed;
 }
 

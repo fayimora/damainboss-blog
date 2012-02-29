@@ -1,8 +1,11 @@
 <article class="post round">
-<h3><%= post.title %></h3>
-<%= coderay post.body %>
+<h2><%= post.title %></h2>
+<sub>Posted at <%= post.created_at %>, Last updated at <%= post.updated_at %></sub>
+<p>
+	<%= coderay post.body %>
+</p>
+
 <ul>
-  <li>Posted at <%= post.created_at %></li>
   <li><%= pluralize post.comments.count, "comment" %></li>
   <li><%= primary_button_link_to "show", post %></li>
 </ul>
