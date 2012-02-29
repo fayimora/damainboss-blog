@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.page(params[:page]).per(5)
+    @posts = Post.order("id DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -13,7 +13,8 @@ class PostsController < ApplicationController
       gflash :success => "Post has been created!"
       redirect_to @post
     else
-      gflash :notice => "Message Not Saved!"
+      gflash :error => "Post has not been created"
+      gflash :notice => "Complete all fields"
       render :new
     end
   end
