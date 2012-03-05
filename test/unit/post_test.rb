@@ -1,9 +1,10 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "post should be invalid without a title"
+    p = Post.new
+    assert !z.valid?
+  end
 end
 
 # == Schema Information

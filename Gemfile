@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem "gritter", "1.0.1"
+gem 'newrelic_rpm'
 gem 'mysql2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -42,4 +43,9 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'capybara'
+  gem 'shoulda'
+  gem 'mocha'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.6'
 end
