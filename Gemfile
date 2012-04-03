@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.2.2'
 gem "gritter", "1.0.1"
 gem 'newrelic_rpm'
 gem 'mysql2'
@@ -22,11 +22,12 @@ gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :b
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'guard-rspec'
 gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -48,4 +49,8 @@ group :test do
   gem 'mocha'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.6'
+  gem 'guard-spork'
+  gem 'fuubar'
+  gem 'growl'
+  gem 'rb-fsevent'
 end
